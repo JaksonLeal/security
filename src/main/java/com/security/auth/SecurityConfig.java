@@ -22,13 +22,13 @@ public class SecurityConfig {
 	private JwtFilter jwtFilter;
 
 	@Bean
-	public AuthenticationManager authenticationManagerBean(AuthenticationConfiguration authenticationConfiguration)
+	AuthenticationManager authenticationManagerBean(AuthenticationConfiguration authenticationConfiguration)
 			throws Exception {
 		return authenticationConfiguration.getAuthenticationManager();
 	}
 
 	@Bean
-	public BCryptPasswordEncoder passwordEncoder() { // codificar contraseña
+	BCryptPasswordEncoder passwordEncoder() { // codificar contraseña
 		return new BCryptPasswordEncoder();
 	}
 
